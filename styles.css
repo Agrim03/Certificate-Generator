@@ -1,0 +1,59 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.certificate {
+  margin-top: 30px;
+  padding: 40px;
+  background-color: rgb(197, 177, 177);
+  border: 5px double black;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+  min-height: 400px;
+}
+
+.date {
+  margin-top: 20px;
+}
+
+#qrcode {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "qr-creator": "^1.0.0",
+    "qr-scanner": "^1.4.2"
+  }
+}
