@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify Certificate</title>
+  <link rel="stylesheet" href="cerify.css" />
+  
+</head>
+<body>
+  <div class="verify-container">
+    <div class="verify-box">
+      <h2>Certificate Verification</h2>
+      <p class="valid">✅ Valid Certificate</p>
+      <p class="message" id="verifyMessage">Loading...</p>
+      <p>Date Verified: <span id="date"></span></p>
+    </div>
+  </div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name");
+  const course = params.get("course");
+
+  const message = document.getElementById("verifyMessage");
+  if (name && course) {
+    message.textContent = `${name} has successfully completed the course: "${course}".`;
+  } else {
+    message.textContent = "Invalid certificate details.";
+  }
+
+  document.getElementById("date").textContent = new Date().toLocaleDateString();
+</script>
+</body>
+</html>

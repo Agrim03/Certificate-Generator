@@ -10,18 +10,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>Portfolio Certificate Generator</h1>
+    <h1 class="animated-title">Portfolio Certificate Generator</h1>
     <input type="text" id="nameInput" placeholder="Enter your name" />
     <input type="text" id="courseInput" placeholder="Enter course name" />
     <input type="text" id="Instrucorinput" placeholder="Enter Instructor name" />
 
     <button onclick="generateCertificate()">Generate</button>
+    <button onclick="redirectToVerify()">Verify Certificate</button>
+    
+    <div class="color-buttons">
+      <!-- <button onclick="changeBackgroundImage('lay1.png')">Default</button> -->
+      <button onclick="changeBackgroundImage('lay1.png')">Elegant</button>
+      <button onclick="changeBackgroundImage('lay2.png')">Classic</button>
+      <button onclick="changeBackgroundImage('lay3.png')">Modern</button>
+    </div>
+    
 
     <div id="certificate" class="certificate">
       <h2>Certificate of Completion</h2>
       <p>This is to certify that</p>
       <h3 id="certName">[Your Name]</h3>
-      <p>has successfully completed the seminar/course on</p>
+      <p>has successfully completed the</p>
+      <p> seminar/course on</p>
       <h4 id="cname">[Course Name]</h4>
       <p>By Instructor:</p>
       <h5 id="Iname">[Instructor Name]</h5>
