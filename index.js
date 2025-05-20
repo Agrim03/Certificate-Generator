@@ -15,11 +15,11 @@ function generateCertificate() {
   const today = new Date().toLocaleDateString();
   document.getElementById("date").textContent = today;
 
-  // Clear existing QR code before generating a new one
+  
   const qrDiv = document.getElementById("qrcode");
   qrDiv.innerHTML = "";
 
-  const qrText = `Certificate for ${name}\nCourse: ${course}\nInstructor: ${instructor}\nDate: ${today}`;
+  const qrText = `${window.location.origin}/verify.html?name=${encodeURIComponent(name)}&course=${encodeURIComponent(course)}`;
 
   new QRCode(qrDiv, {
     text: qrText,
@@ -37,3 +37,21 @@ function downloadCertificate() {
     link.click();
   });
 }
+
+function changeBackgroundImage(imagePath) {
+  const certificate = document.getElementById("certificate");
+  certificate.style.backgroundImage = `url('${imagePath}')`;
+}
+
+function redirectToVerify() {
+    const name = document.getElementById("nameInput").value.trim();
+    const course = document.getElementById("courseInput").value.trim();
+
+    if (name === "" || course === "") {
+      alert("Please enter your name and course.");
+      return;
+    }
+
+    const url = `verify.html?name=${encodeURIComponent(name)}&course=${encodeURIComponent(course)}`;
+    window.location.href = url;
+  }
